@@ -9,16 +9,38 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
 //      ● O sistema deve permitir excluir revistas
 //      ● O sistema deve permitir visualizar todas as revistas
 //      ● O sistema deve mostrar o status atual(disponível/emprestada/reservada)
-//  Regras de Negócio:
-//      ● Campos obrigatórios:
-//        ○ Título(2-100 caracteres)
-//        ○ Número da edição(número positivo)
-//        ○ Ano de publicação(data válida)
-//        ○ Caixa(seleção obrigatória)
-//      ● Não pode haver revistas com mesmo título e edição
-//      ● Status possíveis: Disponível / Emprestada / Reservada
-//      ● Ao cadastrar, o status padrão é "Disponível"
-    class TelaRevista
+//  
+    public class TelaRevista
     {
+        public void ExibirCabecalho()
+        {
+            Console.Clear();
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("|         Cadastros de Revistas           |");
+            Console.WriteLine("-----------------------------------------");
+
+        }
+        public char ApresentarMenuAmigos()
+        {
+            ExibirCabecalho();
+
+            Console.WriteLine();
+            Console.WriteLine("1) Cadastrar nova revista:");
+            Console.WriteLine("2) Editar cadastro de revistas:");
+            Console.WriteLine("3) Excluir cadastro de revistas:");
+            Console.WriteLine("4) Vizualizar cadastro de revistas:");
+
+            Console.WriteLine("S) para sair:");
+            Console.WriteLine();
+            Console.WriteLine("Digite uma opção válida");
+            char opcaoEscolhida = Console.ReadLine()[0];     //<<<- pq array ????
+
+            return opcaoEscolhida;
+
+        }
+
+    }
+}
+
     }
 }
