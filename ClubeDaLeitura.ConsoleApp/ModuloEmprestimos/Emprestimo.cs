@@ -1,5 +1,8 @@
 ﻿
 
+using ClubeDaLeitura.ConsoleApp.ModuloAmigos;
+using ClubeDaLeitura.ConsoleApp.ModuloRevistas;
+
 namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
 {
     //   Regras de Negócio:
@@ -16,11 +19,11 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
 
    public class Emprestimo                      // isso aqui ta errado.
     {
-        public string NomeAmigo;
-        public string NomeRevista;
-        public int DataEmprestimo;
-        public int DataDevolucao;
-        public bool Status;
-
+        public int Id;
+        public Amigo Amigo;
+        public Revista Revista;
+        public DateTime DataEmprestimo;
+        public DateTime DataDevolucao;
+        public string Status;
     }
 }

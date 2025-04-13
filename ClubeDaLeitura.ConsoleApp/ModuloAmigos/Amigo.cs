@@ -14,16 +14,26 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
     public class Amigo                                  // Está é uma classe da regra de negócio para utilizar em algum momento.
                                                         // Alt + Enter apos clicar no atributo, seleciona extract method to constructor.          
     {
-
-        public string NomeAmigo;
+        public int Id;
+        public string Nome;
         public string NomeResponsavel;
         public string Telefone;
+        public DateTime DataAbertura;
 
-        public Amigo(string nomeAmigo, string nomeResponsavel, string telefone)                     // criado um construtor
+
+        public Amigo(string nome, string nomeResponsavel, string telefone)                     // criado um construtor
         {
-            NomeAmigo = nomeAmigo;
+            Nome = nome;
             NomeResponsavel = nomeResponsavel;
             Telefone = telefone;
+            DataAbertura = DateTime.Now;
+
+        }
+        public int ObterTempoDecorrido()
+        {
+            TimeSpan diferencaTempo = DateTime.Now.Subtract(DataAbertura);
+
+            return diferencaTempo.Days;
         }
     }
 }

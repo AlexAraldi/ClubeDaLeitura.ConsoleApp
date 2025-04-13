@@ -16,15 +16,13 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
     {
         public string TituloRevista;
         public int NumeroEdicao;
-        public int AnoPublicacao;
-        public bool Status;
+        public DateTime AnoPublicacao;
 
-        public Revista(string tituloRevista, int numeroEdicao, int anoPublicacao, bool status)
+        public Revista(string tituloRevista, int numeroEdicao, DateTime anoPublicacao)
         {
             TituloRevista = tituloRevista;
             NumeroEdicao = numeroEdicao;
             AnoPublicacao = anoPublicacao;
-            Status = status;
         }
     }
 }
