@@ -21,7 +21,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
             Console.WriteLine("-----------------------------------------");
 
         }
-        public string ApresentarMenuAmigos()
+        public char ApresentarMenuAmigos()
         {
             ExibirCabecalho();
 
@@ -34,11 +34,14 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
             Console.WriteLine("S) para sair:");
             Console.WriteLine();
             Console.WriteLine("Digite uma opção válida");
-            string opcaoEscolhida = Console.ReadLine();     //<<<- pq array ????
+            char opcaoEscolhida = Console.ReadLine()[0];     
 
             return opcaoEscolhida;
 
         }
+
+           
+
         
 
 

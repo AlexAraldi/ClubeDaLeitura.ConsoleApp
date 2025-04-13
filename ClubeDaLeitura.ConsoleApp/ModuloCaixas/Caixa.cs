@@ -1,5 +1,7 @@
 ﻿
 
+using ClubeDaLeitura.ConsoleApp.ModuloRevistas;
+
 namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
 {
     // Regras de Negócio: 
@@ -14,16 +16,38 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
     {
         public string NomeCaixas;
         public string NomeEtiquetas;
-        public int DataEmprestimo;
+        public int DataEmprestimos;
+        public Revista[] Revistas;
+        public DateTime DataAbertura;
 
-        public Caixa(string nomeCaixas, string nomeEtiquetas, int dataEmprestimo)
+        public Caixa(string nomeCaixas, string nomeEtiquetas, int dataEmprestimos)
         {
             NomeCaixas = nomeCaixas;
             NomeEtiquetas = nomeEtiquetas;
-            DataEmprestimo = dataEmprestimo;
+            DataEmprestimos = dataEmprestimos;
+            DataAbertura = DateTime.Now;
+
         }
 
+        public int ObterTempoDecorrido()
+        {
+            TimeSpan diferencaTempo = DateTime.Now.Subtract(DataAbertura);
 
+            return diferencaTempo.Days;
+        }
+
+        public string ObterNomeCaixas()
+        {
+            Console.WriteLine("Digite nome da caixa: ");
+            return NomeCaixas;
+        }
+        public string ObterNomeEtiquetas()
+        {
+            Console.WriteLine("Digite nome da etiqueta");
+            return NomeEtiquetas;
+        }
+
+       
 
     }
 }

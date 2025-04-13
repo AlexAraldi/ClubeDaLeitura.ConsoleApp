@@ -26,4 +26,6 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
         public DateTime DataDevolucao;
         public string Status;
     }
+
+    
 }
