@@ -14,33 +14,23 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
 
     public class Revista
     {
-        public string TituloRevista;
-        public int NumeroEdicao;
+        public int Id;
+        public string Titulo;
+        public int Status;
         public int AnoPublicacao;
+        public int Edicao;
+        public string Caixa;
 
-        public Revista(string tituloRevista, int numeroEdicao, int anoPublicacao)
+        public Revista (string titulo, int status, int anoPublicacao, int edicao)
         {
-            TituloRevista = tituloRevista;
-            NumeroEdicao = numeroEdicao;
+            Titulo = titulo;
+            Status = status;
             AnoPublicacao = anoPublicacao;
+            Edicao = edicao;
         }
 
 
-        public int ObterAnoPublicacao()
-        {
-            Console.WriteLine("Digite o número da publicação: ");
-            return 0;
-        }
-        public string ObterTituloRevista()
-        {
-            Console.WriteLine("Digite nome do nova revista: ");
-            return TituloRevista;
-        }
-        public int ObterNumeroEdicao()
-        {
-            Console.WriteLine("Digite o número da edição: ");
-            return NumeroEdicao;
-        }
+       
 
     }
 

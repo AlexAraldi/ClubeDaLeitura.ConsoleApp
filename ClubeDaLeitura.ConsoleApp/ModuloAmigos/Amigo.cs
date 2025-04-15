@@ -26,26 +26,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
             Telefone = telefone;
             DataAbertura = DateTime.Now;
         }
-        public int ObterTempoDecorrido()
-        {
-            TimeSpan diferencaTempo = DateTime.Now.Subtract(DataAbertura);
-            return diferencaTempo.Days;
-        }
-        public string ObterNomeAmigo() 
-        {
-            Console.WriteLine("Digite nome do novo amigo: ");
-            return Nome;
-        }
-        public string ObterNomeResponsavel()
-        {
-            Console.WriteLine("Digite o nome do responsável: ");
-            return NomeResponsavel;
-        }
-        public string ObterTelefone()
-        {
-            Console.WriteLine("Digite Telefone (formato validado: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX): ");
-            return Telefone;
-        }
+        
 
         
     }

@@ -14,38 +14,24 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
     //  ● Cada caixa define o prazo máximo para empréstimo de suas revistas
     public class Caixa
     {
-        public string NomeCaixas;
-        public string NomeEtiquetas;
-        public int DataEmprestimos;
-        public Revista[] Revistas;
-        public DateTime DataAbertura;
+        public int Id;
+        public string NomeEtiqueta;
+        public string CorEtiqueta;
+        public int DiasEmprestimo;
+        public Revista[] Revista;
+       
 
-        public Caixa(string nomeCaixas, string nomeEtiquetas, int dataEmprestimos)
+        public Caixa(string nomeEtiqueta, string corEtiqueta, int diasEmprestimo)
         {
-            NomeCaixas = nomeCaixas;
-            NomeEtiquetas = nomeEtiquetas;
-            DataEmprestimos = dataEmprestimos;
-            DataAbertura = DateTime.Now;
+            NomeEtiqueta = nomeEtiqueta;
+            CorEtiqueta = corEtiqueta;
+            DiasEmprestimo = diasEmprestimo;
 
         }
 
-        public int ObterTempoDecorrido()
-        {
-            TimeSpan diferencaTempo = DateTime.Now.Subtract(DataAbertura);
+       
 
-            return diferencaTempo.Days;
-        }
-
-        public string ObterNomeCaixas()
-        {
-            Console.WriteLine("Digite nome da caixa: ");
-            return NomeCaixas;
-        }
-        public string ObterNomeEtiquetas()
-        {
-            Console.WriteLine("Digite nome da etiqueta");
-            return NomeEtiquetas;
-        }
+       
 
        
 

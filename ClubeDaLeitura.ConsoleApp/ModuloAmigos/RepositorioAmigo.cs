@@ -4,57 +4,66 @@ using ClubeDaLeitura.ConsoleApp.Compartilhados;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
 {
-    public Amigo[] amigos = new Amigo[100];
-    public int contadorAmigos = 0;
-
-    public void CadastrarAmigo(Amigo novoAmigo)
+    public class RepositorioAmigo
     {
-        novoAmigo.Id = GeradorIds.GerarIdAmigo();
+        public Amigo[] amigos = new Amigo[100];
+        public int contadorAmigos = 0;
 
-        Amigos[contadorAmigo++] = novoAmigo;
-    }
-
-    public bool EditarAmigo(int idChamado, Amigo novoAmigo)
-    {
-        for (int i = 0; i < amigos.Length; i++)
+        public void CadastrarAmigo(Amigo novoAmigo)
         {
-            if (amigos[i] == null)
-                continue;
+            novoAmigo.Id = GeradorIds.GerarIdCaixas();
 
-            else if (amigos[i].Id == idAmigos)
-            {
-                amigos[i].Nome = novoAmigo.Nome;
-                amigos[i].NomeResponsavel = novoAmigo.NomeResponsavel;
-                amigos[i].Telefone = novoAmigo.Telefone;
-                amigos[i].DataAbertura = novoAmigo.DataAbertura;
-
-                return true;
-            }
+            amigos[contadorAmigos++] = novoAmigo;
         }
 
-        return false;
-    }
-
-    public Amigos[] SelecionarAmigos()
-    {
-        return amigos;
-    }
-
-    public bool ExcluirAmigos(int idAmigos)
-    {
-        for (int i = 0; i < amigos.Length; i++)
+        public bool EditarAmigo(int idChamado, Amigo novoAmigo)
         {
-            if (amigos[i] == null) continue;
-
-            else if (amigos[i].Id == idAmigos)
+            for (int i = 0; i < amigos.Length; i++)
             {
-                amigos[i] = null;
+                if (amigos[i] == null)
+                    continue;
 
-                return true;
+                else if (amigos[i].Id == novoAmigo.Id)
+                {
+                    amigos[i].Nome = novoAmigo.Nome;
+                    amigos[i].NomeResponsavel = novoAmigo.NomeResponsavel;
+                    amigos[i].Telefone = novoAmigo.Telefone;
+                    amigos[i].DataAbertura = novoAmigo.DataAbertura;
+
+                    return true;
+                }
             }
+
+            return false;
         }
 
-        return false;
+        public Amigo[] SelecionarAmigo()
+        {
+            return amigos;
+        }
+
+        public bool ExcluirAmigo(int idAmigos)
+        {
+            for (int i = 0; i < amigos.Length; i++)
+            {
+                if (amigos[i] == null) continue;
+
+                else if (amigos[i].Id == idAmigos)
+                {
+                    amigos[i] = null;
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+
+
+
+
     }
+
 }
-}
+

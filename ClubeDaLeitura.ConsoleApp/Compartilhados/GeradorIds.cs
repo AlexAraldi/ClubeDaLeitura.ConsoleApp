@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace ClubeDaLeitura.ConsoleApp.Compartilhados
 {
@@ -12,6 +8,7 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhados
         public static int IdAmigos = 0;
         public static int IdRevistas = 0;
         public static int IdCaixas = 0;
+        public static int IdEmprestimos = 0;
 
         public static int GerarIdRevistas()
         {
@@ -27,11 +24,17 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhados
             return IdCaixas;
         }
 
-        public static int GerarIdAmigos()
+        public static int GerarIdCaixas()
         {
             IdAmigos++;
 
             return IdAmigos;
+        }
+        public static int GerarEmprestimos()
+        {
+            IdEmprestimos++;
+
+            return IdEmprestimos;
         }
     }
 

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
 {
-    class RepositorioEmprestimo
+    public class RepositorioEmprestimo
     {
+
+
     }
 }

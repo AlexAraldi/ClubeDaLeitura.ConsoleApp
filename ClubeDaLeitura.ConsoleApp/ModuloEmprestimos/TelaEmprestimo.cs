@@ -13,6 +13,13 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
 
     public class TelaEmprestimo
     {
+        RepositorioEmprestimo repositorioEmprestimo;
+
+        public TelaEmprestimo(RepositorioEmprestimo repositorioEmprestimo) 
+        {
+            this.repositorioEmprestimo = repositorioEmprestimo;
+        }
+
         public void ExibirCabecalho()
         {
             Console.Clear();
@@ -39,10 +46,6 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
             return opcaoEscolhida;
 
         }
-
-    }
-}
-
 
     }
 }
