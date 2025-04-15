@@ -60,6 +60,19 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
         }
 
 
+        public Amigo BuscarAmigo(int idamigo)
+        {
+            for (int i = 0; i < amigos.Length; i++)
+            {
+                if (amigos[i].Id == idamigo)
+                {
+                    return amigos[i];
+                }
+            }
+            return null;
+        } 
+
+
 
 
 

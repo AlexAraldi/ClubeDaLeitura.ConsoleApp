@@ -2,6 +2,10 @@
 
 
 
+using ClubeDaLeitura.ConsoleApp.ModuloAmigos;
+using ClubeDaLeitura.ConsoleApp.ModuloCaixas;
+using ClubeDaLeitura.ConsoleApp.ModuloRevistas;
+
 namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
 {
 //   Requisitos Funcionais:
@@ -14,10 +18,15 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
     public class TelaEmprestimo
     {
         RepositorioEmprestimo repositorioEmprestimo;
+        RepositorioAmigo repositorioAmigo;
+        RepositorioRevista repositorioRevista;
 
-        public TelaEmprestimo(RepositorioEmprestimo repositorioEmprestimo) 
+
+        public TelaEmprestimo(RepositorioEmprestimo repositorioEmprestimo, RepositorioAmigo repositorioAmigo, RepositorioRevista repositorioRevista) 
         {
             this.repositorioEmprestimo = repositorioEmprestimo;
+            this.repositorioAmigo = repositorioAmigo;
+            this.repositorioRevista = repositorioRevista;
         }
 
         public void ExibirCabecalho()
@@ -41,10 +50,61 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
             Console.WriteLine("S) para sair:");
             Console.WriteLine();
             Console.WriteLine("Digite uma opção válida");
-            char opcaoEscolhida = Console.ReadLine()[0];     //<<<- pq array ????
+            char opcaoEscolhida = Console.ReadLine()[0];  
 
             return opcaoEscolhida;
 
+        }
+
+        public void CadastrarEmprestimo()
+        {
+            Console.Clear();
+            int idAmigo = 0, idRevista = 0;
+            int diasEmprestimo = 0;
+            DateTime hoje = DateTime.Today;
+            ListarAmigos();
+            idAmigo = ObterIdUsuario(idAmigo);
+            Amigo amigo = repositorioAmigo.BuscarAmigo(idAmigo);
+            idRevista = ObterIdRevista(idRevista);
+            Emprestimo emprestimo = new Emprestimo(amigo, idRevista, hoje, dataDevolucao, status);
+        }
+        public int ObterIdUsuario(int idAmigo)
+        {
+            Console.WriteLine("Digite Id do Amigo: ");
+            idAmigo = Convert.ToInt32(Console.ReadLine())!;
+            return idAmigo;
+        }
+        public int ObterIdRevista(int idRevista)
+        {
+            Console.WriteLine("Digite Id da revista:");
+            idRevista =Convert.ToInt32 (Console.ReadLine())!;
+            return idRevista;
+        }
+        public int ObterDiaEmprestimos(int diasEmprestimo)
+        {
+            Console.WriteLine("Digite quantos dias de empréstimo:");
+            diasEmprestimo = Convert.ToInt32(Console.ReadLine());
+            return diasEmprestimo;
+        }
+        public void ListarAmigos()
+        {
+            Console.Clear();
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("|         Lista de Amigos           |");
+            Console.WriteLine("-----------------------------------------");
+
+            Console.WriteLine(
+          "{0, -6} | {1, -20} | {2, -30} | {3, -30} ",
+          "Id", "Nome", "Nome Responsável", "Telefone");
+
+            Amigo[] amigos = repositorioAmigo.SelecionarAmigo();
+            for (int i = 0; i < amigos.Length; i++)
+            {
+                if (amigos[i] == null) continue;
+                Console.WriteLine("{0, -6} | {1, -20} | {2, -30} | {3, -30} ",
+                amigos[i].Id, amigos[i].Nome, amigos[i].NomeResponsavel, amigos[i].Telefone);
+            }
+            Console.ReadLine();
         }
 
     }

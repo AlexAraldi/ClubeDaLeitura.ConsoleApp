@@ -17,7 +17,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
     //      ● A data de devolução é calculada automaticamente(data empréstimo + dias da
     //      caixa)
 
-   public class Emprestimo                      // isso aqui ta errado.
+   public class Emprestimo                   
     {
         public int Id;
         public Amigo Amigo;
@@ -25,7 +25,16 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
         public DateTime DataEmprestimo;
         public DateTime DataDevolucao;
         public string Status;
-    }
 
+        public Emprestimo(Amigo amigo, Revista revista, DateTime dataEmprestimo, DateTime dataDevolucao, string status)
+        {
+            Amigo = amigo;
+            Revista = revista;
+            DataEmprestimo = dataEmprestimo;
+            DataDevolucao = dataDevolucao;
+            Status = status;
+        }
+    }
+    
     
 }

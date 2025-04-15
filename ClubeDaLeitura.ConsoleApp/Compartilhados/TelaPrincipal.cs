@@ -37,13 +37,4 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhados
 
 
 
-    // Aqui criar switch case para todos os menus 
-    // os repositorios armazenam a logica dos metodos de cada arquivo
-    // tela apresenta a interacao com o usuario e chama os metodos do repositorio 
-
-
-    // criar os geradores de ids um pra cada objeto .
-    // primeiro passos desenvolver o crud repositorio
-    // segundo realizar tela
-
 
