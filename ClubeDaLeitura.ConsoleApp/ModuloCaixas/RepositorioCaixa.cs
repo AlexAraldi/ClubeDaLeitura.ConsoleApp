@@ -57,5 +57,14 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
 
             return false;
         }
+
+        // dentro do repositorioCaixa = implementar o metodo =  SelecionarPorId( ) 
+        public void SelecionarPorId(int idCaixa)
+        {
+
+        }
+
+
+
     }
 }

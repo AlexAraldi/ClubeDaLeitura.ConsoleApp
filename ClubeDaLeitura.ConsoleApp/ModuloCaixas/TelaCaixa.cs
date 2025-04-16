@@ -89,5 +89,19 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
             }
             Console.ReadLine();
         }
+
+        // telaCaixa = implementar os metodos = Editar( ), Excluir( ),
+        public void Editar(int id)
+        {
+
+        }
+
+        public void Excluir()
+        {
+
+        }
+
+
+
     }
 }

@@ -90,6 +90,21 @@
         }
 
 
+        public void ExcluirAmigo()
+        {
+
+            
+        }
+        public void EditarAmigo()
+        {
+
+        }
+        public void VizualizarEmprestimo()
+        {
+
+        }
+
+
 
 
 

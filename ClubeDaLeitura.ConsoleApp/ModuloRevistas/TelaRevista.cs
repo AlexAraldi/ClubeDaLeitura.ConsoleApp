@@ -92,6 +92,12 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
             Console.ReadLine();
         }
 
+        // dentro do telaRevista = implementar os metodos = VisualizarCaixas()
+        public void VizualizarCaixas()
+        {
+
+        }
+
     }
 
 }

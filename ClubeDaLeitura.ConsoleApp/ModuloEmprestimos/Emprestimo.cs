@@ -5,9 +5,9 @@ using ClubeDaLeitura.ConsoleApp.ModuloRevistas;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
 {
-   
 
-   public class Emprestimo                   
+
+    public class Emprestimo
     {
         public int Id;
         public Amigo Amigo;
@@ -24,7 +24,24 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
             DataDevolucao = dataDevolucao;
             Status = status;
         }
+        // dentro do objeto Emprestimo.cs = implementar os metodos = Validar( ), ObterDataDevolucao( ), RegistrarDevolucao()
+        public void Validar()
+        {
+
+        }
+        public void ObterDataDevolucao()
+        {
+            DataEmprestimo = DateTime.Now;
+        }
+        public void RegistrarDevolucao()
+        {
+            DataEmprestimo = DateTime.Now;
+        }
+
+
+
     }
-    
-    
+
+
+
 }

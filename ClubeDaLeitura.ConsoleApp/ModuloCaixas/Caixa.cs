@@ -29,11 +29,23 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
 
         }
 
-       
 
-       
+        // dentro do objeto caixa.cs = implementar os metodos = Validar(), AdicionarRevista(),RemoverRevista()
 
-       
+
+        public void Validar(Caixa caixa)
+        {
+
+        }
+        public void AdicionarRevista(Revista revista) 
+        {
+
+        }
+        public void RemoverRevista(Revista[] revista) 
+        { 
+                
+        }
+
 
     }
 }

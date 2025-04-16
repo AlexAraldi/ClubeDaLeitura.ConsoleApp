@@ -106,6 +106,19 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
             }
             Console.ReadLine();
         }
+        // dentro do telaEmprestimo = implementar os metodos = VisualizarRevistas(),VisualizarAmigos(),RegistrarDevolucao()
+        public void VizualizarRevistas()
+        {
+
+        }
+        public void VizualizarAmigos()
+        {
+
+        }
+        public void RegistrarDevolucao()
+        {
+
+        }
 
     }
 }

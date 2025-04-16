@@ -58,6 +58,15 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
 
             return false;
         }
+        // dentro do repositorioRevista = implementar os metodos = SelecionarTodos(),SelecionarPorId()
+        public void SelecionarTodos()
+        {
+
+        }
+        public void SelecionarPorId()
+        {
+
+        }
 
 
     }

@@ -1,4 +1,6 @@
 ﻿
+using ClubeDaLeitura.ConsoleApp.ModuloEmprestimos;
+
 namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
 {
    
@@ -24,6 +26,11 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
                 erros += "O compo nome é obrigatório. \n";
             if (Nome.Length < 3 && Nome.Length > 100)
                 erros += "O nome deve ter no mínimo 3 e máximo 100 caracteres";
+        }
+        public string ObterEmprestimo()
+        {
+
+
         }
     }
     

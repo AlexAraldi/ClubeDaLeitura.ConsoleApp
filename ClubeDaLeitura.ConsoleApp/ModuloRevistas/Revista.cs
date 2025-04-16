@@ -28,10 +28,26 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
             AnoPublicacao = anoPublicacao;
             Edicao = edicao;
         }
+        // dentro do objeto revista.cs = implementar os metodos = Validar(), Emprestar(), Devolver(), Reservar()
 
+        public void Validar()
+        {
 
-       
+        }
+        public void Emprestar()
+        {
+
+        }
+        public void Devolver()
+        {
+
+        }
+        public void Reservar()
+        {
+
+        }
 
     }
+
 
 }
