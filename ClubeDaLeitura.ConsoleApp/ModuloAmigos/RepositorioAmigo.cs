@@ -11,7 +11,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
 
         public void CadastrarAmigo(Amigo novoAmigo)
         {
-            novoAmigo.Id = GeradorIds.GerarIdCaixas();
+            novoAmigo.Id = GeradorIds.GerarIdAmigos();
 
             amigos[contadorAmigos++] = novoAmigo;
         }
@@ -37,7 +37,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
             return false;
         }
 
-        public Amigo[] SelecionarAmigo()
+        public Amigo[] SelecionarTodos()     // implementar se for null, nao retornar. Para somente mandar os blocos do array quer forem completos.
         {
             return amigos;
         }
@@ -58,9 +58,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
 
             return false;
         }
-
-
-        public Amigo BuscarAmigo(int idamigo)
+        public Amigo SelecionarPorId(int idamigo)
         {
             for (int i = 0; i < amigos.Length; i++)
             {

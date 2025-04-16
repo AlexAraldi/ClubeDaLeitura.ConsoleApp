@@ -36,7 +36,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
             return false;
         }
 
-        public Caixa[] SelecionarCaixa()
+        public Caixa[] SelecionarTodos()     // implementar se for null, nao retornar. Para somente mandar os blocos do array quer forem completos
         {
             return caixas;
         }

@@ -17,14 +17,14 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhados
             return IdRevistas;
         }
 
-        public static int GerarIdcaixas()
+        public static int GerarIdCaixas()
         {
             IdCaixas++;
 
             return IdCaixas;
         }
 
-        public static int GerarIdCaixas()
+        public static int GerarIdAmigos()
         {
             IdAmigos++;
 

@@ -1,15 +1,5 @@
-﻿
-namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
+﻿namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
 {
-    // Requisitos Funcionais
-    //  ● O sistema deve permitir a inserção de novos amigos 
-    //  ● O sistema deve permitir a edição de amigos já cadastrados
-    //  ● O sistema deve permitir excluir amigos já cadastrados
-    //  ● O sistema deve permitir visualizar amigos cadastrados 
-    //  ● O sistema deve permitir visualizar os empréstimos do amigo.
-   
-
-
     public class TelaAmigo
     {
         RepositorioAmigo repositorioAmigo;
@@ -77,7 +67,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
             return Telefone;
         }
         
-        public void ListarAmigos()
+        public void VizualizarTodos()
         {
             Console.Clear();
             Console.WriteLine("-----------------------------------------");
@@ -88,7 +78,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
           "{0, -6} | {1, -20} | {2, -30} | {3, -30} ",
           "Id", "Nome", "Nome Responsável", "Telefone");
 
-            Amigo[] amigos = repositorioAmigo.SelecionarAmigo();
+            Amigo[] amigos = repositorioAmigo.SelecionarTodos();
             for (int i = 0; i < amigos.Length; i++)
             {
                 if (amigos[i] == null) continue;

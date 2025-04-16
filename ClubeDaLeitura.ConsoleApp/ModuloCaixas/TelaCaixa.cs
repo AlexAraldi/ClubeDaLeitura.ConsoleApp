@@ -69,7 +69,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
             diasEmprestimo = Convert.ToInt32(Console.ReadLine());
             return diasEmprestimo;
         }
-        public void ListarCaixas()
+        public void VizualizarTodos()
         {
             Console.Clear();
             Console.WriteLine("-----------------------------------------");
@@ -80,7 +80,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixas
           "{0, -6} | {1, -20} | {2, -30} | {3, -30} ",
           "Id", "Etiqueta", "Cor Etiqueta", "Dias de empréstimo");
 
-            Caixa[]caixas = repositorioCaixa.SelecionarCaixa();
+            Caixa[]caixas = repositorioCaixa.SelecionarTodos();
             for (int i = 0; i < caixas.Length; i++)
             {
                 if (caixas[i] == null) continue;

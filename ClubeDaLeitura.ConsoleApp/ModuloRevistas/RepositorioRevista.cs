@@ -37,7 +37,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
             return false;
         }
 
-        public Revista[] SelecionarRevista()
+        public Revista[] SelecionarRevista()     // implementar se for null, nao retornar. Para somente mandar os blocos do array quer forem completos
         {
             return revista;
         }

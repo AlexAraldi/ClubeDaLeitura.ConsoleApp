@@ -62,9 +62,9 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
             int idAmigo = 0, idRevista = 0;
             int diasEmprestimo = 0;
             DateTime hoje = DateTime.Today;
-            ListarAmigos();
+            VizualizarTodos();
             idAmigo = ObterIdUsuario(idAmigo);
-            Amigo amigo = repositorioAmigo.BuscarAmigo(idAmigo);
+            Amigo amigo = repositorioAmigo.BuscarIdAmigo(idAmigo);
             idRevista = ObterIdRevista(idRevista);
             Emprestimo emprestimo = new Emprestimo(amigo, idRevista, hoje, dataDevolucao, status);
         }
@@ -86,7 +86,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
             diasEmprestimo = Convert.ToInt32(Console.ReadLine());
             return diasEmprestimo;
         }
-        public void ListarAmigos()
+        public void VizualizarTodos()
         {
             Console.Clear();
             Console.WriteLine("-----------------------------------------");
@@ -97,7 +97,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
           "{0, -6} | {1, -20} | {2, -30} | {3, -30} ",
           "Id", "Nome", "Nome Responsável", "Telefone");
 
-            Amigo[] amigos = repositorioAmigo.SelecionarAmigo();
+            Amigo[] amigos = repositorioAmigo.SelecionarTodos();
             for (int i = 0; i < amigos.Length; i++)
             {
                 if (amigos[i] == null) continue;

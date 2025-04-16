@@ -1,15 +1,6 @@
-﻿
-using ClubeDaLeitura.ConsoleApp.ModuloCaixas;
-
+﻿using ClubeDaLeitura.ConsoleApp.ModuloCaixas;
 namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
 {
-    //  Requisitos Funcionais:
-    //      ● O sistema deve permitir cadastrar novas revistas
-    //      ● O sistema deve permitir editar revistas existentes
-    //      ● O sistema deve permitir excluir revistas
-    //      ● O sistema deve permitir visualizar todas as revistas
-    //      ● O sistema deve mostrar o status atual(disponível/emprestada/reservada)
-    //  
     public class TelaRevista
     {
         RepositorioCaixa repositorioCaixa;
@@ -19,7 +10,6 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
         {
             this.repositorioRevista = repositorioRevista;
             this.repositorioCaixa = repositorioCaixa;
-
         }
         public void ExibirCabecalho()
         {
@@ -27,7 +17,6 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("|         Cadastros de Revistas           |");
             Console.WriteLine("-----------------------------------------");
-
         }
         public char ApresentarMenuAmigos()
         {
@@ -45,7 +34,6 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
             char opcaoEscolhida = Console.ReadLine()[0];
 
             return opcaoEscolhida;
-
         }
         public void CadastrarRevista()
         {
@@ -83,7 +71,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
             edicao = Convert.ToInt32(Console.Read());
             return edicao;
         }
-        public void ListarRevista()
+        public void VizualizarTodos()
         {
             Console.Clear();
             Console.WriteLine("-----------------------------------------");
@@ -103,7 +91,6 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevistas
             }
             Console.ReadLine();
         }
-
 
     }
 
