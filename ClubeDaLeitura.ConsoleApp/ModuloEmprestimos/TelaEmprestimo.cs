@@ -56,18 +56,18 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimos
 
         }
 
-        public void CadastrarEmprestimo()
-        {
-            Console.Clear();
-            int idAmigo = 0, idRevista = 0;
-            int diasEmprestimo = 0;
-            DateTime hoje = DateTime.Today;
-            VizualizarTodos();
-            idAmigo = ObterIdUsuario(idAmigo);
-            Amigo amigo = repositorioAmigo.BuscarIdAmigo(idAmigo);
-            idRevista = ObterIdRevista(idRevista);
-            Emprestimo emprestimo = new Emprestimo(amigo, idRevista, hoje, dataDevolucao, status);
-        }
+        //public void CadastrarEmprestimo()
+        //{
+        //    Console.Clear();
+        //    int idAmigo = 0, idRevista = 0;
+        //    int diasEmprestimo = 0;
+        //    DateTime hoje = DateTime.Today;
+        //    VizualizarTodos();
+        //    idAmigo = ObterIdUsuario(idAmigo);
+        //    Amigo amigo = repositorioAmigo.BuscarIdAmigo(idAmigo);
+        //    idRevista = ObterIdRevista(idRevista);
+        //    Emprestimo emprestimo = new Emprestimo(amigo, idRevista, hoje, dataDevolucao, status);
+        //}
         public int ObterIdUsuario(int idAmigo)
         {
             Console.WriteLine("Digite Id do Amigo: ");

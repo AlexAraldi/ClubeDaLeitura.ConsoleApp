@@ -19,19 +19,19 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigos
             DataAbertura = DateTime.Now;
         }
                
-        public string Validar()
-        {
-            string erros = " ";
-            if (string.IsNullOrEmpty(Nome))
-                erros += "O compo nome é obrigatório. \n";
-            if (Nome.Length < 3 && Nome.Length > 100)
-                erros += "O nome deve ter no mínimo 3 e máximo 100 caracteres";
-        }
-        public string ObterEmprestimo()
-        {
+        //public string Validar()
+        //{
+        //    string erros = " ";
+        //    if (string.IsNullOrEmpty(Nome))
+        //        erros += "O compo nome é obrigatório. \n";
+        //    if (Nome.Length < 3 && Nome.Length > 100)
+        //        erros += "O nome deve ter no mínimo 3 e máximo 100 caracteres";
+        //}
+        //public string ObterEmprestimo()
+        //{
 
 
-        }
+        //}
     }
     
 }
